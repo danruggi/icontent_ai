@@ -49,8 +49,8 @@ def main():
 
 	print()
 
-	print(conf)
-	return
+	# print(conf)
+	# return
 
 	try:
 		# STEP 1
