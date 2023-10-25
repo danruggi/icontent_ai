@@ -1,40 +1,48 @@
 <!-- Version 0.0 alfa -->
 <!-- Developed by Daniele Rugginenti -->
 
-# Automate content generation using the AI
-This pipeline generate texts and images to publish articles on your website.
+# Automate Content Generation with AI
+This pipeline automates the generation of text and images for publishing articles on your website. I initially developed it for my own website to enhance SEO. You can see an example of entirely AI-generated articles here: AI-Generated Articles. What's more, it allows you to create content for free.
 
-I developed it for my website to improve SEO, you can check an example here 
-(all automated AI generated articles): https://deskydoo.com/fe/articles/articles_index 
-I use it and I generate content *for free*. 
+# How the Pipeline Works
+The process is straightforward:
 
-# Pipeline
-Pipeline is quite simple:
-- You define a random text prompt(s). 
-- You define a random image prompt(s). 
-- It uses configurable API to get texts and images
-- It cut the midjourney image into 4, if needed  
-- Convert those in webp
-- Create a json containing paths
-- Publish json in the webfolder 
-- You read the jsons with php file() - examples for a php-index and for php-load-article in the "examples" folder
+- Define random text prompts.
+- Define random image prompts.
+- Utilize configurable APIs to obtain text and images.
+- Crop images into quarters if necessary.
+- Convert images to WebP format.
+- Generate a JSON file containing file paths.
+- Publish the JSON file in the web folder.
+- Use PHP to read the JSON files, and you can find examples for a PHP index and loading articles in the "examples" folder.
 
-# What you need
-1. clone the project on your webserver
-2. register to **rapidAPI**
-3. register to the APIs you want to use (links in settings)
-4. **Create a file called** .api_keys.store in the main dir, and add your API keys, one por line, no spaces
-5. Change prompts script, you can begin with static ones too
-6. ./icontent_ai.py
-7. Configure your webserver to read the json files.
+# What You Need
+Here's what you need to do:
 
-If you need help to configure your webserver, you can contact me, there are different ways to do it.
+- Clone the project to your web server.
+- Register on rapidAPI.
+- Sign up for the APIs you want to use (links provided in settings.py and on the bottom of this help).
+- Create a file called .api_keys.store in the main directory and add your API keys, one per line without spaces.
+- Customize the text prompts; you can start with static ones if desired.
+- Run ./icontent_ai.py.
+- Configure your web server to read the JSON files.
+- If you require assistance configuring this on your web server or website, feel free to contact me. There are different ways to accomplish it.
 
-# Does it work with wordpress? 
-Sure. Just need to call the WS with the right parameters. 
-Can be done via python too.
+# Compatibility with WordPress
+Yes, it's compatible with WordPress. You simply need to call the web service with the right parameters, which can also be done using Python.
 
-# Is it free?
-This script is opensource and free to use.
-Free Tier in rapiAPI is quite strict, you can get 5/10 calls a month/por API/por KEY. 
-You can use multiple API, or you can pay the usage, if you intend to use more frequently.
+# Is it Free?
+Absolutely. This script is open source and free to use. 
+The free tier on rapidAPI has some limitations, allowing around 5 to 10 calls per month per API per key. 
+If you plan to use it more frequently, you can explore using multiple APIs or opt for paid usage of specific APIs.
+
+# API
+After some tests, the best APIs to use are:
+For text: https://rapidapi.com/nextbaseapp/api/chatgpt-gpt4-ai-chatbot
+For Images: https://rapidapi.com/yourdevmail/api/midjourney-api5
+
+You just need to configure the script as:
+TEXT_GEN = 'chatgpt_api8'
+IMAGE_GEN = 'text_to_image7'
+to use those relative modules
+
