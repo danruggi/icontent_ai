@@ -1,10 +1,5 @@
 out_base_folder = "/home/dany/Dropbox/Projects/deskydoo/desky/deskydoo/fe/articles";
 
-api_keys = [
-	'APIKEY1', 
-	'APIKEY2'
-]
-
 # Languages for text, must be set up in format ("ISO2CODE", "FULL")
 LAN_LIST = [
 	# ('it','italian'), 

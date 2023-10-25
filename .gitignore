@@ -1,2 +1,5 @@
 posts/
 tmp/
+
+.git_local_repo_credentials
+.api_keys.store

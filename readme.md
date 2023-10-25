@@ -23,8 +23,8 @@ Pipeline is quite simple:
 1. clone the project on your webserver
 2. register to **rapidAPI**
 3. register to the APIs you want to use (links in settings)
-4. set your API key(s) in the settings.py file
-5. change prompts script, you can begin with static ones too
+4. **Create a file called** .api_keys.store in the main dir, and add your API keys, one por line, no spaces
+5. Change prompts script, you can begin with static ones too
 6. ./icontent_ai.py
 7. Configure your webserver to read the json files.
 
