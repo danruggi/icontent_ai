@@ -44,11 +44,11 @@ def main():
 	print("Writing article in ->", lan)
 	
 	# Init the new post folder
-	print("Create NEW FOLDER ->", conf['path_new_post'])
+	print("Create NEW FOLDERS ->", conf['path_new_post'])
 	init_folders(conf)
 
 	print()
-	
+
 	print(conf)
 	return
 

@@ -29,14 +29,17 @@ def set_conf():
     conf = dict()
     conf['path'] = sys.path[0]
     conf['path_posts'] = os.path.join(conf['path'], 'posts')
+
+    d = pathlib.Path(conf["path_posts"]);
+    if not d.exists():
+        os.mkdir(conf["path_posts"])
+    
     conf['path_new_post'] = find_next_folder(conf)
 
     return conf
 
 def init_folders(conf):
-    d = pathlib.Path(conf["path_posts"]);
-    if not d.exists():
-        os.mkdir(conf["path_posts"])
+
     
     d = pathlib.Path(conf["path_new_post"]);
     if not d.exists():
