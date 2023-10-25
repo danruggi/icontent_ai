@@ -34,6 +34,10 @@ def set_conf():
     return conf
 
 def init_folders(conf):
+    d = pathlib.Path(conf["path_posts"]);
+    if not d.exists():
+        os.mkdir(conf["path_posts"])
+    
     d = pathlib.Path(conf["path_new_post"]);
     if not d.exists():
         os.mkdir(conf["path_new_post"])

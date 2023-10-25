@@ -32,7 +32,7 @@ def main():
 
 	# Set api key
 	# conf['path_new_post'] = '/home/dany/Dropbox/Projects/icontent_ai/posts/48'
-	conf['api_key'] = api_keys[random.randint(0,len(conf['api_keys'])-1)]
+	conf['api_key'] = api_keys[random.randint(0,len(api_keys)-1)]
 
 	# Select language
 	lan_list = conf['LAN_LIST']
@@ -48,9 +48,9 @@ def main():
 	init_folders(conf)
 
 	print()
-	# print(conf)
-
-	# return
+	
+	print(conf)
+	return
 
 	try:
 		# STEP 1
